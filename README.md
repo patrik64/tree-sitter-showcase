@@ -5,7 +5,7 @@ the incremental parsing system written in Rust/C. All parsing happens **in the b
 the tree-sitter runtime and each grammar are compiled to WebAssembly and driven through
 the [`web-tree-sitter`](https://www.npmjs.com/package/web-tree-sitter) bindings.
 
-## Running
+## Run
 
 ```sh
 pnpm i
