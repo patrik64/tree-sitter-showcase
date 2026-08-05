@@ -12,7 +12,7 @@ pnpm i
 pnpm run dev
 ```
 
-## Pages (suggested talk flow)
+## Pages
 
 1. **Intro** (`/`) — what tree-sitter is, who uses it, how this demo works.
 2. **Playground** (`/playground`) — live code → concrete syntax tree.
