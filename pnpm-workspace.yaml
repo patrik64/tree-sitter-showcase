@@ -1,0 +1,5 @@
+allowBuilds:
+  tree-sitter-javascript: true
+  tree-sitter-json: true
+  tree-sitter-python: true
+  tree-sitter-rust: true
