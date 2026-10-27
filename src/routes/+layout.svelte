@@ -8,7 +8,8 @@
 		{ href: '/', label: 'Intro' },
 		{ href: '/playground', label: 'Playground' },
 		{ href: '/queries', label: 'Queries' },
-		{ href: '/incremental', label: 'Incremental' }
+		{ href: '/incremental', label: 'Incremental' },
+		{ href: '/grammars', label: 'Grammars' }
 	];
 </script>
 

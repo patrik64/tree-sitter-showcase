@@ -25,6 +25,13 @@
 				what changed. Watch it beat a full re-parse on every keystroke, live.
 			</p>
 		</a>
+		<a class="card" href="/grammars">
+			<h2>Grammars</h2>
+			<p>
+				Read the real <strong>grammar.js</strong> behind each of the four languages — the JavaScript
+				DSL that tree-sitter compiles into a parser — with a clickable index of every rule.
+			</p>
+		</a>
 	</div>
 
 	<section>

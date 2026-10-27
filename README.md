@@ -33,6 +33,12 @@ pnpm run dev
      parse from scratch; the scoreboard shows the speedup, which grows with file size.
    - The orange highlight shows `tree.getChangedRanges()` — exactly the region an
      editor would need to re-highlight.
+5. **Grammars** (`/grammars`) — the `grammar.js` source of all four grammars.
+   - Tree-sitter grammars are written in a JavaScript DSL (`seq`, `choice`, `repeat`,
+     `prec`, …). This page shows the real upstream files for JavaScript, Rust, Python and
+     JSON with a clickable, filterable index of every rule (`_names` are hidden rules).
+   - Because `grammar.js` is plain JavaScript, the page highlights it with the demo's own
+     tree-sitter-javascript grammar and extracts the rule index with a tree-sitter query.
 
 ## How the WASM fits together
 
@@ -41,6 +47,8 @@ pnpm run dev
   dynamically-linked WASM module loaded on demand by `Language.load()`.
 - The `.wasm` files are copied out of npm packages by `npm run sync-wasm`
   (re-run it after upgrading `web-tree-sitter` or a grammar).
+- `static/grammars/<lang>/grammar.js` — the upstream grammar definitions shown on the
+  Grammars page, copied from the same npm packages by `npm run sync-grammars`.
 
 > Grammar WASMs must be built for the same ABI as the runtime: `web-tree-sitter` ≥ 0.25
 > expects a `dylink.0` custom section. The official `tree-sitter-<lang>` npm packages
@@ -55,3 +63,5 @@ pnpm run dev
 - `src/lib/components/CodeEditor.svelte` — textarea with a synced overlay `<pre>` for
   syntax colors and range highlights.
 - `src/lib/components/TreeNode.svelte` — recursive syntax-tree view.
+- `src/lib/components/SourceView.svelte` — read-only highlighted source with line numbers
+  and jump-to-line (the Grammars page).

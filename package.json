@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"sync-wasm": "cp node_modules/web-tree-sitter/web-tree-sitter.wasm static/wasm/ && for g in javascript rust python json; do cp node_modules/tree-sitter-$g/tree-sitter-$g.wasm static/wasm/; done",
+		"sync-grammars": "for g in javascript rust python json; do mkdir -p static/grammars/$g && cp node_modules/tree-sitter-$g/grammar.js static/grammars/$g/; done",
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
